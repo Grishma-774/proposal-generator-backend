@@ -1,0 +1,524 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creative Business Proposal</title>
+
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #292524;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .document {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 45px;
+            border-top: 10px solid #ea580c;
+        }
+
+        .company-header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .company-name {
+            color: #9a3412;
+            font-size: 25px;
+            font-weight: bold;
+            overflow-wrap: anywhere;
+        }
+
+        .company-logo {
+            max-width: 90px;
+            max-height: 70px;
+            object-fit: contain;
+        }
+
+        .hero {
+            background: #fff7ed;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 35px;
+            border-left: 6px solid #ea580c;
+        }
+
+        .hero-label {
+            color: #ea580c;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .project-title {
+            color: #7c2d12;
+            font-size: 30px;
+            margin: 15px 0;
+        }
+
+        .client-name {
+            color: #78716c;
+            font-size: 14px;
+        }
+
+        .section-heading {
+            color: #c2410c;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .section p {
+            color: #57534e;
+            font-size: 13px;
+            line-height: 1.8;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .content-card {
+            background: #fafaf9;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .price-box {
+            background: #ea580c;
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .price-label {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+        .price {
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .terms {
+            margin-top: 30px;
+        }
+
+        .footer {
+            border-top: 1px solid #e7e5e4;
+            margin-top: 45px;
+            padding-top: 20px;
+            color: #78716c;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="document"> -->
+
+        <!-- <div class="company-header">
+
+            <div class="company-name">
+                {{ proposal.companyName }}
+            </div>
+
+            {% if proposal.companyLogo %}
+                <img src="{{ proposal.companyLogo }}" class="company-logo">
+            {% endif %}
+
+        </div> -->
+        <!-- <div class="company-header">
+
+            {% if proposal.companyLogo %}
+                <img src="{{ proposal.companyLogo }}" class="company-logo">
+            {% endif %}
+
+            <div class="company-name">
+                {{ proposal.companyName }}
+            </div>
+
+        </div>
+
+        <div class="hero">
+
+            <div class="hero-label">BUSINESS PROPOSAL</div>
+
+            <h1 class="project-title">
+                {{ proposal.projectTitle }}
+            </h1>
+
+            <div class="client-name">
+                Prepared for: {{ proposal.clientName }}
+            </div>
+
+        </div>
+
+        <div class="content-grid">
+
+            <div class="content-card section">
+                <h3 class="section-heading">PROJECT OVERVIEW</h3>
+                <p>{{ proposal.projectDescription }}</p>
+            </div>
+
+            <div class="content-card section">
+                <h3 class="section-heading">PROJECT SCOPE</h3>
+                <p>{{ proposal.projectScope }}</p>
+            </div>
+
+        </div>
+
+        <div class="price-box">
+
+            <div class="price-label">TOTAL PROJECT INVESTMENT</div>
+
+            <div class="price">
+                {{ price }}
+            </div>
+
+        </div>
+
+        <div class="terms section">
+
+            <h3 class="section-heading">TERMS & CONDITIONS</h3>
+            <p>{{ proposal.terms }}</p>
+
+            <h3 class="section-heading">PROPOSAL VALIDITY</h3>
+            <p>{{ proposal.validity }}</p>
+
+        </div>
+
+        <div class="footer">
+
+            <span>{{ proposal.companyName }}</span>
+            <span>{{ proposal.clientEmail }}</span>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+ -->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: white;
+            font-family: Arial, sans-serif;
+            color: #334155;
+        }
+
+        .proposal-document {
+            background: white;
+            width: 100%;
+            max-width: 850px;
+            min-height: 1050px;
+            margin: auto;
+            padding: 55px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+            color: #334155;
+            overflow-wrap: anywhere;
+        }
+
+        .proposal-document p {
+            line-height: 1.7;
+            white-space: pre-wrap;
+        }
+
+        /* CREATIVE TEMPLATE */
+
+        .creative-document {
+            padding: 0;
+            border-top: 12px solid #ea580c;
+            min-height: 1050px;
+        }
+
+        .creative-doc-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 45px;
+            border-bottom: 1px solid #fed7aa;
+            color: #9a3412;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            gap: 12px;
+        }
+
+        .company-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+        }
+
+        .preview-company-logo {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            border-radius: 5px;
+            flex-shrink: 0;
+        }
+
+        .company-name {
+            overflow-wrap: anywhere;
+        }
+
+        .creative-doc-hero {
+            position: relative;
+            overflow: hidden;
+            background: #fff7ed;
+            padding: 75px 45px;
+        }
+
+        .creative-doc-hero > p {
+            position: relative;
+            z-index: 1;
+            color: #ea580c;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .creative-doc-hero h1 {
+            position: relative;
+            z-index: 1;
+            color: #292524;
+            font-size: 43px;
+            line-height: 1.2;
+            margin: 25px 0;
+            overflow-wrap: anywhere;
+        }
+
+        .creative-doc-circle {
+            position: absolute;
+            right: -50px;
+            top: 60px;
+            width: 220px;
+            height: 220px;
+            background: #fed7aa;
+            border-radius: 50%;
+        }
+
+        .creative-doc-hero > span {
+            position: relative;
+            z-index: 1;
+            color: #9a3412;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .creative-doc-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            padding: 45px;
+        }
+
+        .creative-doc-content span {
+            color: #ea580c;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .creative-doc-content h2 {
+            color: #292524;
+            font-size: 20px;
+            margin: 15px 0;
+        }
+
+        .creative-doc-content p {
+            color: #78716c;
+            font-size: 13px;
+        }
+
+        .creative-doc-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ea580c;
+            color: white;
+            padding: 30px 45px;
+            gap: 15px;
+        }
+
+        .creative-doc-price span {
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+        .creative-doc-price h2 {
+            font-size: 32px;
+            margin: 10px 0 0;
+            overflow-wrap: anywhere;
+        }
+
+        .creative-doc-price p {
+            font-size: 12px;
+        }
+
+        .creative-doc-terms {
+            padding: 30px 45px;
+            color: #78716c;
+            font-size: 12px;
+        }
+
+        .creative-doc-terms strong {
+            color: #292524;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="proposal-document creative-document">
+
+        <!-- HEADER -->
+
+        <div class="creative-doc-header">
+
+            <div class="company-brand">
+
+                {% if proposal.companyLogo %}
+                    <img
+                        src="{{ proposal.companyLogo }}"
+                        alt="Company Logo"
+                        class="preview-company-logo"
+                    >
+                {% endif %}
+
+                <span class="company-name">
+                    {{ proposal.companyName }}
+                </span>
+
+            </div>
+
+            <span>PROJECT PROPOSAL</span>
+
+        </div>
+
+        <!-- HERO SECTION -->
+
+        <div class="creative-doc-hero">
+
+            <p>LET'S CREATE SOMETHING GREAT</p>
+
+            <h1>{{ proposal.projectTitle }}</h1>
+
+            <div class="creative-doc-circle"></div>
+
+            <span>
+                PREPARED FOR {{ proposal.clientName }}
+            </span>
+
+        </div>
+
+        <!-- PROJECT DETAILS -->
+
+        <div class="creative-doc-content">
+
+            <div class="creative-doc-description">
+
+                <span>01 / THE IDEA</span>
+
+                <h2>Project Overview</h2>
+
+                <p>{{ proposal.projectDescription|default:"Project description not provided." }}</p>
+
+            </div>
+
+            <div class="creative-doc-scope">
+
+                <span>02 / THE PLAN</span>
+
+                <h2>What We'll Deliver</h2>
+
+                <p>{{ proposal.projectScope|default:"Project scope not provided." }}</p>
+
+            </div>
+
+        </div>
+
+        <!-- INVESTMENT -->
+
+        <div class="creative-doc-price">
+
+            <div>
+
+                <span>03 / PROJECT INVESTMENT</span>
+
+                <h2>{{ price }}</h2>
+
+            </div>
+
+            <p>
+                Prepared by {{ proposal.companyName }}
+            </p>
+
+        </div>
+
+        <!-- TERMS -->
+
+        <div class="creative-doc-terms">
+
+            <strong>Terms & Conditions</strong>
+
+            <p>{{ proposal.terms|default:"No additional terms specified." }}</p>
+
+            <p>
+                Valid until: {{ proposal.validity|default:"Not specified" }}
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

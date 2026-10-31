@@ -1,0 +1,422 @@
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Business Proposal</title>
+
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #1e293b;
+            background: white;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .document {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 55px;
+            border-top: 10px solid #2563eb;
+        }
+
+        .company-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 45px;
+        }
+
+        .company-logo {
+            max-width: 75px;
+            max-height: 75px;
+            object-fit: contain;
+        }
+
+        .company-name {
+            color: #1e3a8a;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .heading {
+            color: #1e3a8a;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #64748b;
+            margin-bottom: 40px;
+        }
+
+        .project-title {
+            font-size: 23px;
+            margin-bottom: 25px;
+        }
+
+        .section {
+            margin-bottom: 28px;
+        }
+
+        .section h3 {
+            color: #2563eb;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            color: #475569;
+            font-size: 14px;
+            line-height: 1.7;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+        }
+
+        .client-details {
+            background: #f8fafc;
+            padding: 18px;
+            border-left: 4px solid #2563eb;
+            margin-bottom: 30px;
+        }
+
+        .price-box {
+            background: #eff6ff;
+            padding: 22px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .price-label {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .price {
+            color: #1d4ed8;
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        .footer {
+            border-top: 1px solid #e2e8f0;
+            margin-top: 50px;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            color: #64748b;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="document">
+
+        <div class="company-header">
+            {% if proposal.companyLogo %}
+                <img src="{{ proposal.companyLogo }}" class="company-logo">
+            {% endif %}
+
+            <div class="company-name">
+                {{ proposal.companyName }}
+            </div>
+        </div>
+
+        <h1 class="heading">Business Proposal</h1>
+        <p class="subtitle">A proposal prepared for your consideration</p>
+
+        <h2 class="project-title">{{ proposal.projectTitle }}</h2>
+
+        <div class="client-details">
+            <strong>Prepared For:</strong> {{ proposal.clientName }}<br>
+            {{ proposal.clientCompany }}<br>
+            {{ proposal.clientEmail }}<br>
+            {{ proposal.clientAddress }}
+        </div>
+
+        <div class="section">
+            <h3>Project Overview</h3>
+            <p>{{ proposal.projectDescription }}</p>
+        </div>
+
+        <div class="section">
+            <h3>Project Scope</h3>
+            <p>{{ proposal.projectScope }}</p>
+        </div>
+
+        <div class="price-box">
+            <div class="price-label">Project Investment</div>
+            <div class="price">{{ price }}</div>
+        </div>
+
+        <div class="section">
+            <h3>Terms & Conditions</h3>
+            <p>{{ proposal.terms }}</p>
+        </div>
+
+        <div class="section">
+            <h3>Proposal Validity</h3>
+            <p>{{ proposal.validity }}</p>
+        </div>
+
+        <div class="footer">
+            <span>Prepared by {{ proposal.companyName }}</span>
+            <span>Business Proposal</span>
+        </div>
+
+    </div>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modern Business Proposal</title>
+
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: white;
+            color: #334155;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .modern-document {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 55px;
+            border-top: 10px solid #2563eb;
+            overflow-wrap: anywhere;
+        }
+
+        .modern-doc-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 20px;
+        }
+
+        .company-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .company-logo {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+
+        .modern-doc-header h2 {
+            color: #172554;
+            font-size: 21px;
+            margin: 0;
+        }
+
+        .modern-doc-header span {
+            color: #2563eb;
+            font-size: 11px;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .modern-doc-title {
+            margin: 90px 0 75px;
+        }
+
+        .modern-doc-title > p:first-child {
+            color: #2563eb;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .modern-doc-title h1 {
+            color: #172554;
+            font-size: 42px;
+            margin: 20px 0;
+            line-height: 1.2;
+        }
+
+        .modern-doc-line {
+            width: 65px;
+            height: 5px;
+            background: #2563eb;
+            margin: 25px 0;
+        }
+
+        .modern-doc-title p:last-child {
+            color: #64748b;
+            font-size: 15px;
+        }
+
+        .modern-doc-section {
+            margin-bottom: 35px;
+        }
+
+        .modern-doc-section h3 {
+            color: #172554;
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .modern-doc-section p {
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.7;
+            white-space: pre-wrap;
+        }
+
+        .modern-doc-price {
+            margin-top: 55px;
+            padding: 25px;
+            background: #eff6ff;
+            border-left: 5px solid #2563eb;
+        }
+
+        .modern-doc-price span {
+            color: #64748b;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        .modern-doc-price h2 {
+            color: #172554;
+            font-size: 30px;
+            margin: 10px 0 0;
+        }
+
+        .modern-doc-footer {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 70px;
+            padding-top: 20px;
+        }
+
+        .modern-doc-footer strong {
+            color: #172554;
+            font-size: 12px;
+        }
+
+        .modern-doc-footer p {
+            color: #64748b;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="modern-document">
+
+        <div class="modern-doc-header">
+
+            <div class="company-brand">
+
+                {% if proposal.companyLogo %}
+                    <img
+                        src="{{ proposal.companyLogo }}"
+                        class="company-logo"
+                        alt="Company Logo"
+                    >
+                {% endif %}
+
+                <h2>{{ proposal.companyName }}</h2>
+
+            </div>
+
+            <span>BUSINESS PROPOSAL</span>
+
+        </div>
+
+        <div class="modern-doc-title">
+
+            <p>PROPOSAL FOR</p>
+
+            <h1>{{ proposal.projectTitle }}</h1>
+
+            <div class="modern-doc-line"></div>
+
+            <p>Prepared for {{ proposal.clientName }}</p>
+
+        </div>
+
+        <div class="modern-doc-section">
+
+            <h3>01. ABOUT THIS PROJECT</h3>
+
+            <p>{% if proposal.projectDescription %}{{ proposal.projectDescription }}{% else %}Project description not provided.{% endif %}</p>
+
+        </div>
+
+        <div class="modern-doc-section">
+
+            <h3>02. PROJECT SCOPE</h3>
+
+            <p>{% if proposal.projectScope %}{{ proposal.projectScope }}{% else %}Project scope not provided.{% endif %}</p>
+
+        </div>
+
+        <div class="modern-doc-price">
+
+            <span>PROJECT INVESTMENT</span>
+
+            <h2>{{ price }}</h2>
+
+        </div>
+
+        <div class="modern-doc-footer">
+
+            <div>
+                <strong>Prepared for</strong>
+                <p>{{ proposal.clientName }}</p>
+            </div>
+
+            <div>
+                <strong>Prepared by</strong>
+                <p>{{ proposal.companyName }}</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
