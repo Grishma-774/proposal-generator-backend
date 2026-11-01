@@ -1,4 +1,8 @@
 
+import os
+
+# Use the browser installed inside the Playwright package
+os.environ["PLAYWRIGHT_BROWSERS_PATH"] = "0"
 
 from django.http import HttpResponse, JsonResponse
 from django.template.loader import render_to_string
